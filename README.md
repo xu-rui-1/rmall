@@ -21,4 +21,4 @@
 ### nginx
 
 ## 消息中间件
-### rabbitmq
+### rabbitmq + kafka

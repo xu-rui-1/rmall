@@ -6,6 +6,8 @@ package com.alipay.rmall.web.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alipay.rmall.base.config.RabbitMqConfig;
+import com.alipay.rmall.dto.ProductBaseInfoDTO;
+import com.alipay.rmall.web.utils.ProductBaseInfoConvertUtil;
 import com.alipay.rmall.web.vo.ProductBaseInfoVO;
 import io.swagger.annotations.Api;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
@@ -30,8 +32,9 @@ public class RabbitController {
 
     @PostMapping("/sendMessage")
     public void sendMessage(@RequestBody ProductBaseInfoVO productBaseInfoVO) {
+        ProductBaseInfoDTO productBaseInfoDTO = ProductBaseInfoConvertUtil.convertProductBaseInfoVO2DTO(productBaseInfoVO);
         String msgId = UUID.randomUUID().toString().replaceAll("-", "");
         rabbitTemplate.convertAndSend(
-                RabbitMqConfig.DIRECT_EXCHANGE, RabbitMqConfig.DIRECT_ROUTING_KEY, JSON.toJSONString(productBaseInfoVO), new CorrelationData(msgId));
+                RabbitMqConfig.DIRECT_EXCHANGE, RabbitMqConfig.DIRECT_ROUTING_KEY, JSON.toJSONString(productBaseInfoDTO), new CorrelationData(msgId));
     }
 }

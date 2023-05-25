@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/assembly/assembly.iml" filepath="$PROJECT_DIR$/assembly/assembly.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dal/dal.iml" filepath="$PROJECT_DIR$/dal/dal.iml" />
       <module fileurl="file://$PROJECT_DIR$/rmall.iml" filepath="$PROJECT_DIR$/rmall.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assembly/rmall-assembly.iml" filepath="$PROJECT_DIR$/assembly/rmall-assembly.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/rmall-base.iml" filepath="$PROJECT_DIR$/base/rmall-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dal/rmall-dal.iml" filepath="$PROJECT_DIR$/dal/rmall-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/rmall-service.iml" filepath="$PROJECT_DIR$/service/rmall-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/rmall-web.iml" filepath="$PROJECT_DIR$/web/rmall-web.iml" />
     </modules>
   </component>
 </project>

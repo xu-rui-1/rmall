@@ -7,14 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="rmall-dal" />
-        <module name="rmall-web" />
         <module name="web" />
         <module name="service" />
         <module name="rmall-base" />
         <module name="rmall-assembly" />
         <module name="assembly" />
-        <module name="rmall-service" />
         <module name="dal" />
         <module name="base" />
       </profile>
@@ -39,6 +36,11 @@
       <module name="base" options="-parameters" />
       <module name="dal" options="-parameters" />
       <module name="rmall" options="-parameters" />
+      <module name="rmall-assembly" options="-parameters" />
+      <module name="rmall-base" options="-parameters" />
+      <module name="rmall-dal" options="-parameters" />
+      <module name="rmall-service" options="-parameters" />
+      <module name="rmall-web" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="web" options="-parameters" />
     </option>

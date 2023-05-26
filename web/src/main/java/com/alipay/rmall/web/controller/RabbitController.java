@@ -35,6 +35,6 @@ public class RabbitController {
         ProductBaseInfoDTO productBaseInfoDTO = ProductBaseInfoConvertUtil.convertProductBaseInfoVO2DTO(productBaseInfoVO);
         String msgId = UUID.randomUUID().toString().replaceAll("-", "");
         rabbitTemplate.convertAndSend(
-                RabbitMqConfig.DIRECT_EXCHANGE, RabbitMqConfig.DIRECT_ROUTING_KEY, JSON.toJSONString(productBaseInfoDTO), new CorrelationData(msgId));
+                RabbitMqConfig.DIRECT_EXCHANGE, RabbitMqConfig.DIRECT_ROUTING_KEY, productBaseInfoDTO, new CorrelationData(msgId));
     }
 }

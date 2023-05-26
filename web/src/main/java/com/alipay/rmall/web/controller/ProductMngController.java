@@ -4,7 +4,6 @@
  */
 package com.alipay.rmall.web.controller;
 
-import com.alipay.rmall.dal.domain.ProductBaseInfoDO;
 import com.alipay.rmall.dto.ProductBaseInfoDTO;
 import com.alipay.rmall.service.ProductService;
 import com.alipay.rmall.web.utils.ProductBaseInfoConvertUtil;

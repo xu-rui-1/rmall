@@ -22,3 +22,11 @@
 
 ## 消息中间件
 ### rabbitmq + kafka
+
+### 踩坑记录
+
+#### 1、JSON.parseObject()方法报错： com.alibaba.fastjson.JSONException: syntax error, expect {, actual string, pos 0, fastjson-version 1.2.47
+- 原因：
+- 字符串中存在转义字符，导致解析失败；在使用JSON.toJSONString()方法时，就会加入转义字符
+- 解决办法：
+- 通过JSON.parse(msg).toString()进行解析，去掉转义字符

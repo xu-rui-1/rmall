@@ -22,9 +22,7 @@ public class MqConsumer {
 
     @RabbitListener(queues = {RabbitMqConfig.DIRECT_QUEUE})
     public void receive(Message message) {
-        String msg = new String(message.getBody());
-        ProductBaseInfoDTO baseInfoDTO = JSON.parseObject(msg, ProductBaseInfoDTO.class);
-
+        ProductBaseInfoDTO baseInfoDTO = JSON.parseObject(JSON.parse(message.getBody()).toString(), ProductBaseInfoDTO.class);
         log.info(baseInfoDTO.toString());
     }
 }
